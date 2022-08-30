@@ -1,7 +1,5 @@
 import React from "react";
 
-import "../index.css";
-
 import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
@@ -56,21 +54,19 @@ function App() {
         isOpen={isEditAvatarPopupOpen}
         onClose={closeAllPopups}
       >
-        <form className="popup__form popup__form_avatar">
-          <label className="popup__label" htmlFor="avatar">
-            <input
-              id="avatar"
-              name="avatar"
-              placeholder="Ссылка на картинку"
-              type="url"
-              required
-              className="popup__info popup__info_input_avatar"
-            />
-            <div className="popup__error-message-container">
-              <span id="avatar-error" className="popup__error-message"></span>
-            </div>
-          </label>
-        </form>
+        <label className="popup__label" htmlFor="avatar">
+          <input
+            id="avatar"
+            name="avatar"
+            placeholder="Ссылка на картинку"
+            type="url"
+            required
+            className="popup__info popup__info_input_avatar"
+          />
+          <div className="popup__error-message-container">
+            <span id="avatar-error" className="popup__error-message"></span>
+          </div>
+        </label>
       </PopupWithForm>
 
       <PopupWithForm
@@ -80,44 +76,42 @@ function App() {
         isOpen={isEditProfilePopupOpen}
         onClose={closeAllPopups}
       >
-        <form className="popup__form popup__form_edit">
-          <label className="popup__label" htmlFor="profile-name">
-            <input
-              id="profile-name"
-              name="name"
-              placeholder="Имя"
-              type="text"
-              required
-              minLength="2"
-              maxLength="40"
-              className="popup__info popup__info_input_profile-name"
-            />
-            <div className="popup__error-message-container">
-              <span
-                id="profile-name-error"
-                className="popup__error-message"
-              ></span>
-            </div>
-          </label>
-          <label className="popup__label" htmlFor="profile-title">
-            <input
-              id="profile-title"
-              name="about"
-              placeholder="О себе"
-              type="text"
-              required
-              minLength="2"
-              maxLength="200"
-              className="popup__info popup__info_input_profile-title"
-            />
-            <div className="popup__error-message-container">
-              <span
-                id="profile-title-error"
-                className="popup__error-message"
-              ></span>
-            </div>
-          </label>
-        </form>
+        <label className="popup__label" htmlFor="profile-name">
+          <input
+            id="profile-name"
+            name="name"
+            placeholder="Имя"
+            type="text"
+            required
+            minLength="2"
+            maxLength="40"
+            className="popup__info popup__info_input_profile-name"
+          />
+          <div className="popup__error-message-container">
+            <span
+              id="profile-name-error"
+              className="popup__error-message"
+            ></span>
+          </div>
+        </label>
+        <label className="popup__label" htmlFor="profile-title">
+          <input
+            id="profile-title"
+            name="about"
+            placeholder="О себе"
+            type="text"
+            required
+            minLength="2"
+            maxLength="200"
+            className="popup__info popup__info_input_profile-title"
+          />
+          <div className="popup__error-message-container">
+            <span
+              id="profile-title-error"
+              className="popup__error-message"
+            ></span>
+          </div>
+        </label>
       </PopupWithForm>
 
       <PopupWithForm
@@ -127,42 +121,34 @@ function App() {
         isOpen={IsAddPlacePopupOpen}
         onClose={closeAllPopups}
       >
-        <form className="popup__form popup__form_add">
-          <label className="popup__label" htmlFor="place-name">
-            <input
-              id="place-name"
-              name="name"
-              placeholder="Название"
-              type="text"
-              required
-              minLength="2"
-              maxLength="30"
-              className="popup__info popup__info_input_place-name"
-            />
-            <div className="popup__error-message-container">
-              <span
-                id="place-name-error"
-                className="popup__error-message"
-              ></span>
-            </div>
-          </label>
-          <label className="popup__label" htmlFor="place-link">
-            <input
-              id="place-link"
-              name="link"
-              placeholder="Ссылка на картинку"
-              type="url"
-              required
-              className="popup__info popup__info_input_place-link"
-            />
-            <div className="popup__error-message-container">
-              <span
-                id="place-link-error"
-                className="popup__error-message"
-              ></span>
-            </div>
-          </label>
-        </form>
+        <label className="popup__label" htmlFor="place-name">
+          <input
+            id="place-name"
+            name="name"
+            placeholder="Название"
+            type="text"
+            required
+            minLength="2"
+            maxLength="30"
+            className="popup__info popup__info_input_place-name"
+          />
+          <div className="popup__error-message-container">
+            <span id="place-name-error" className="popup__error-message"></span>
+          </div>
+        </label>
+        <label className="popup__label" htmlFor="place-link">
+          <input
+            id="place-link"
+            name="link"
+            placeholder="Ссылка на картинку"
+            type="url"
+            required
+            className="popup__info popup__info_input_place-link"
+          />
+          <div className="popup__error-message-container">
+            <span id="place-link-error" className="popup__error-message"></span>
+          </div>
+        </label>
       </PopupWithForm>
 
       {/* <PopupWithForm
