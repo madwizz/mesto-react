@@ -1,3 +1,22 @@
+# Project work: "Mesto-react"
+
+## A typical one-page site, adapted for desktop and mobile devices made with the use of React. Created as part of a study at Yandex.Praktikum on a web development course. 
+
+### The work uses advanced HTML, CSS and JavaScript.
+
+### Technologies: 
+* Figma
+* BEM
+* BEM Nested
+* Flexbox
+* Grid Layout
+
+### Languages: 
+* HTML 
+* CSS
+* JavaScript
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
