@@ -9,6 +9,18 @@ function PopupWithForm({
   buttonText,
   onSubmit,
 }) {
+  React.useEffect(() => {
+    function handleEscClose(evt) {
+      if (evt.key === "Escape") {
+        onClose();
+      }
+    }
+    document.addEventListener("keydown", handleEscClose);
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [onClose]);
+
   return (
     <section className={`popup popup_${name} ${isOpen ? "popup_opened" : ""}`}>
       <div className="popup__content">

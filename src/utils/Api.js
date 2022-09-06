@@ -66,7 +66,6 @@ class Api {
   }
 
   newCard(cardInfo) {
-    console.log(cardInfo);
     this._newCard = fetch(`${this._host}/cards`, {
       method: "POST",
       headers: this._headers,
@@ -81,6 +80,14 @@ class Api {
       headers: this._headers,
     }).then(this._handleResponse);
     return this._removeCard;
+  }
+
+  changeLikeCardStatus(id, isLiked) {
+    this._changeLikeCardStatus = fetch(`${this._host}/cards/${id}/likes`, {
+      method: `${isLiked ? "PUT" : "DELETE"}`,
+      headers: this._headers,
+    }).then(this._handleResponse);
+    return this._changeLikeCardStatus;
   }
 }
 
